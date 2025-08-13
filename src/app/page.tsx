@@ -40,7 +40,7 @@ export default function Home() {
       const el = document.getElementById(id);
       if (!el) return;
       const headerHeight = getHeaderHeight();
-      const viewportOffsetTop = (window as any).visualViewport?.offsetTop ?? 0;
+      const viewportOffsetTop = window.visualViewport?.offsetTop ?? 0;
       const style = getComputedStyle(el);
       const paddingTop = parseFloat(style.getPropertyValue("padding-top")) || 0;
       const targetTop = Math.round(
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-8 text-slate-900 leading-tight tracking-tight">
-              Hey, I'm zombcat.
+              Hey, I&apos;m zombcat.
             </h1>
 
             <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
